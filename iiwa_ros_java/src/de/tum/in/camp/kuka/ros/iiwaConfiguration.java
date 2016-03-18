@@ -150,7 +150,9 @@ public class iiwaConfiguration extends AbstractNodeMain {
 				}
 			}
 		}
-		robotIp = localhostIp;
+		//TODO : change the whole concept here, since we don't need anymore publishers
+		robotIp = "172.31.1.147";
+		//robotIp = localhostIp;
 		System.out.println("robot ip: " + robotIp);
 		
 		staticConfigurationSuccessful = true;
