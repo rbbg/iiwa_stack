@@ -260,6 +260,7 @@ public class iiwaConfiguration extends AbstractNodeMain {
 		return timeProvider;
 	}
 
+	// TODO : this is probably not usefull anymore, we can still create buttons on the fly but not publish things from events linked to them
 	public void setupToolbars(IApplicationUI appUI, 
 			final iiwaPublisher publisher, 
 			List<IUserKey> generalKeys, 
