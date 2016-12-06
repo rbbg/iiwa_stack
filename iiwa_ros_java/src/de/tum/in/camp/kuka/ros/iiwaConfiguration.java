@@ -1,8 +1,8 @@
  /**  
  * Copyright (C) 2016 Salvatore Virga - salvo.virga@tum.de, Marco Esposito - marco.esposito@tum.de
- * Technische Universität München
+ * Technische Universitï¿½t Mï¿½nchen
  * Chair for Computer Aided Medical Procedures and Augmented Reality
- * Fakultät für Informatik / I16, Boltzmannstraße 3, 85748 Garching bei München, Germany
+ * Fakultï¿½t fï¿½r Informatik / I16, Boltzmannstraï¿½e 3, 85748 Garching bei Mï¿½nchen, Germany
  * http://campar.in.tum.de
  * All rights reserved.
  * 
@@ -39,6 +39,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.lang.RuntimeException
 
 import org.ros.exception.ParameterNotFoundException;
 import org.ros.namespace.GraphName;
@@ -152,6 +153,10 @@ public class iiwaConfiguration extends AbstractNodeMain {
 		}
 		robotIp = localhostIp;
 		System.out.println("Robot IP: " + robotIp);
+
+		if (!localhostIpFound) {		
+			throw new RuntimeException("Cannot find Ethernet interface on same subnet as ROS Master!");
+		}
 		
 		staticConfigurationSuccessful = true;
 	}
