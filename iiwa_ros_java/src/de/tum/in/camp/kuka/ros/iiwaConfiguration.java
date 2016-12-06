@@ -39,7 +39,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
-import java.lang.RuntimeException
 
 import org.ros.exception.ParameterNotFoundException;
 import org.ros.namespace.GraphName;
