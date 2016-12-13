@@ -1,0 +1,29 @@
+sensors:
+  - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+    point_cloud_topic: /camera/depth/points
+    max_range: 5.0
+    point_subsample: 1
+    padding_offset: 0.05
+    padding_scale: 1
+    filtered_cloud_topic: filtered_cloud
+    self_mask:
+        min_sensor_dist: 0.8
+        self_see_default_padding: .04
+        self_see_default_scale: 1.0
+        self_see_links:
+            - name: iiwa_link_0
+              # padding: 0.2
+            - name: iiwa_link_1
+              # padding: 0.2 
+            - name: iiwa_link_2
+              # padding: 0.06
+            - name: iiwa_link_3
+              # padding: 0.06 
+            - name: iiwa_link_4
+              # padding: 0.06 
+            - name: iiwa_link_5
+              # padding: 0.06 
+            - name: iiwa_link_6
+              # padding: 0.06 
+            - name: iiwa_link_7
+              # padding: 0.06 
