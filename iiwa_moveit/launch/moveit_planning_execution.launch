@@ -12,7 +12,11 @@
     <arg name="robot_name" default="iiwa"/>
     <!-- Model of the iiwa to use : iiwa7, iiwa14 -->
     <arg name="model" default="iiwa7"/>
+    <arg name="gui" default="false"/>
+    <arg name="headless" default="true"/>
     <arg name="rviz" default="true" />
+    <arg name="debug_gazebo" default="false" />
+    <arg name="debug_move_group" default="false" />
     
     <remap from="/$(arg hardware_interface)_trajectory_controller/follow_joint_trajectory" 
            to="/$(arg robot_name)/$(arg hardware_interface)_trajectory_controller/follow_joint_trajectory" />
@@ -27,6 +31,9 @@
             <arg name="hardware_interface" value="$(arg hardware_interface)"/>
             <arg name="robot_name" value="$(arg robot_name)" />
             <arg name="model" value="$(arg model)"/>
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="headless" value="$(arg headless)"/>
+            <arg name="debug" value="$(arg debug_gazebo)"/>
         </include>
     </group>
     
@@ -55,6 +62,7 @@
             <arg name="hardware_interface" value="$(arg hardware_interface)"/>
             <arg name="robot_name" value="$(arg robot_name)"/>
             <arg name="model" value="$(arg model)" />
+            <arg name="debug" value="$(arg debug_move_group)" />
         </include>
         
         <include if="$(arg rviz)" file="$(find iiwa_moveit)/launch/moveit_rviz.launch">
