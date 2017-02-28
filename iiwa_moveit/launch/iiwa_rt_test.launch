@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Load Gazebo with given values -->
+  <include file="$(find iiwa_moveit)/launch/moveit_planning_execution.launch">
+    <arg name="debug_move_group" value="false"/>
+  </include>
+  <node pkg="moveit_rt_optim" type="wrench_publisher.py" name="wp"/>
+
+</launch>

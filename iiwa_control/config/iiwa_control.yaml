@@ -2,7 +2,7 @@
   # Publish all joint states -----------------------------------
   joint_state_controller:
     type: joint_state_controller/JointStateController
-    publish_rate: 50  
+    publish_rate: 200  
   
   # Controllers for singular joint ------------------------------------
   # 
@@ -130,7 +130,7 @@
     constraints:
       goal_time: 0.5                   # Override default
 
-    state_publish_rate:  25            # Override default
+    state_publish_rate:  250            # Override default
     action_monitor_rate: 30            # Override default
     stop_trajectory_duration: 0        # Override default
     
@@ -149,7 +149,7 @@
     constraints:
       goal_time: 0.5                   # Override default
 
-    state_publish_rate:  25            # Override default
+    state_publish_rate:  250            # Override default
     action_monitor_rate: 30            # Override default
     stop_trajectory_duration: 0        # Override default
     
@@ -178,7 +178,7 @@
     constraints:
       goal_time: 0.5                   # Override default
 
-    state_publish_rate:  25            # Override default
+    state_publish_rate:  250            # Override default
     action_monitor_rate: 30            # Override default
     stop_trajectory_duration: 0        # Override default
 

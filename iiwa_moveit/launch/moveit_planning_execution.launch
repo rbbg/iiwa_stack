@@ -22,6 +22,10 @@
            to="/$(arg robot_name)/$(arg hardware_interface)_trajectory_controller/follow_joint_trajectory" />
     <remap from="robot_description" to="/$(arg robot_name)/robot_description" /> 
     <remap from="/get_planning_scene" to="/$(arg robot_name)/get_planning_scene" /> 
+
+
+    <!-- Load NoTool! (for the right frame) -->
+    <param name="/iiwa/toolName" type="string" value="NoTool"/>   
     
     <!-- Run the robot within a Gazebo simulation. -->
     <group if="$(arg sim)">
@@ -70,6 +74,6 @@
         </include>
     </group>
     
-    <include file="$(find iiwa_moveit)/launch/default_warehouse_db.launch" />
+    <!--<include file="$(find iiwa_moveit)/launch/default_warehouse_db.launch" />-->
     
 </launch>
