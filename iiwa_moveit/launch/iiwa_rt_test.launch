@@ -6,4 +6,6 @@
   </include>
   <node pkg="moveit_rt_optim" type="wrench_publisher.py" name="wp"/>
 
+  <node name="wp_relay" type="relay" pkg="topic_tools" args="iiwa/py_wrench_pub iiwa/rt_optim/CartesianWrench" />
+
 </launch>
