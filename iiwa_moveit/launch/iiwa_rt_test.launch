@@ -4,8 +4,9 @@
   <include file="$(find iiwa_moveit)/launch/moveit_planning_execution.launch">
     <arg name="debug_move_group" value="false"/>
   </include>
+  
   <node pkg="moveit_rt_optim" type="wrench_publisher.py" name="wp"/>
 
-  <node name="wp_relay" type="relay" pkg="topic_tools" args="iiwa/py_wrench_pub iiwa/rt_optim/CartesianWrench" />
+  <node name="wp_relay" type="relay" pkg="topic_tools" args="iiwa/py_wrench_pub iiwa/move_group/moveit_rt_optim/CartesianWrench" />
 
 </launch>
